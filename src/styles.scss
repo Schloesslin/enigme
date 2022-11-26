@@ -1,1 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
+/***********************************/
+/*             General             */
+/***********************************/
+body {
+  margin: 0px;
+}
+
+/***********************************/
+/*         App Enigme List         */
+/***********************************/
+app-enigme-list {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));;
+
+  app-enigme-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
+/***********************************/
+/*        App Enigme General       */
+/***********************************/
+app-enigme {
+  padding: 24px;
+  color: white;
+  background-color: black;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  overflow-y: scroll;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  app-enigme-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    .app-enigme {
+      width: 100%;
+    }
+
+    app-enigme-base {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+      app-enigme-base-title {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        app-enigme-base-title-home {
+          cursor: pointer;
+          position: absolute;
+          left: 24px;
+          top: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          margin: 0;
+
+          img {
+            height: 50%;
+          }
+        }
+      }
+
+      .app-enigme-image-container {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        app-enigme-base-image {
+          position: relative;
+          width: 100%;
+          margin: 32px;
+          margin-top: 0;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+
+/***********************************/
+/*          App Enigme One         */
+/***********************************/
+app-enigme-one {
+  app-enigme-base-image {
+    .indication1, .indication2 {
+      cursor: pointer;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: brown;
+      background-color: blanchedalmond;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+
+    .indication1 {
+      left: 11%;
+      top: 46%;
+    }
+
+    .indication2 {
+      width: 350px;
+      left: calc(50% - 350px / 2);
+    }
+  }
+}
+
